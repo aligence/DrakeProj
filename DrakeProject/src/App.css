@@ -9,17 +9,17 @@
 }
 
 .home-hero-logo{
-  height: 10em;
-  left: -1.5rem;
+  height: 7em;
   position: absolute;
-  top: -0rem;
-  width: 10em;
+  top: 0;
+  width: 7em;
 }
 
 .home-hero-logo img{
-  width: 10em;
+  width: 7em;
   height: auto;
   color:white;
+
 }
 
 #home-hero{

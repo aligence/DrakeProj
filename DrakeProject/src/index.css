@@ -49,6 +49,8 @@ h1 {
   animation: fadeIn 1s ease-in-out; /* You can adjust the duration and timing function */
 }
 
+
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

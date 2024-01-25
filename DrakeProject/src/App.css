@@ -19,20 +19,20 @@
   width: 7em;
   height: auto;
   color:white;
-
 }
 
 #home-hero{
   width: 100%;
-  height: 150vh;
+  height: 140vh;
 }
 
 
 #home-hero video{
   object-fit: cover;
   width: 100%;
-  height: 150vh;
+  height: 140vh;
 }
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

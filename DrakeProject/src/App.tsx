@@ -4,8 +4,8 @@ function App() {
   return (
     <>
       <div className = "pageView">
-        <div id = "home-hero">
-        <div className='home-hero-logo'>
+        <div id = "home-hero animation-fadeIn">
+        <div className='home-hero-logo animate-fade-in'>
             <img src='../../ovo.png'></img>
         </div>
           <Navbar></Navbar>

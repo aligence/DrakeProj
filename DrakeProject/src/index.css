@@ -38,7 +38,7 @@ h1 {
 
 @keyframes fadeIn {
   from {
-    opacity: 0;
+    opacity: .3;
   }
   to {
     opacity: 100;
@@ -46,9 +46,13 @@ h1 {
 }
 
 .animate-fade-in {
-  animation: fadeIn 1s ease-in-out; /* You can adjust the duration and timing function */
+  animation: fadeIn 1s ease-in-out; 
 }
 
+.time-date{
+  left:37%;
+  font-family: montreal-bold, sans-serif;
+}
 
 @media (prefers-color-scheme: light) {
   :root {

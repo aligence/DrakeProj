@@ -5,14 +5,14 @@ import Timer from './components/Timer'
 import Login from './components/Login'
 import { useEffect, useState } from 'react'
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
+
 
 {/*I CAN GET THE ACCESS TOKEN, NEED TO MAKE FUNCTION OR SOME OTHER THING 
 SO THAT IT AUTOMATICALLY PUTS THE ALBUM IMAGES INTO CAROUSEL COMPONENT*/}
 const CLIENT_ID = "e1635bb6cf544f28a1aa7c4844000ff7"
 const CLIENT_SECRET = "d2114d03781c4b328b2756a755f81d49"
 const REDIRECT_URI = "http://localhost:5173/callback";
+const code = new URLSearchParams(window.location.search).get('code')
 function App() {
   const [accessToken, setAccessToken] = useState("");
 
@@ -45,8 +45,7 @@ function App() {
           </video>
           <Timer></Timer>
         </div>
-        <About></About> 
-        <Login></Login>
+        {code ? <About code ={code}/> : <Login/>}
       </div>
     </>
   )

@@ -15,6 +15,7 @@ const REDIRECT_URI = "http://localhost:5173/callback";
 const code = new URLSearchParams(window.location.search).get('code')
 function App() {
   const [accessToken, setAccessToken] = useState("");
+  
 
   useEffect(() =>{
     //API Acces Token

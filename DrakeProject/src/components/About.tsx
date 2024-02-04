@@ -1,5 +1,6 @@
-
+import useAuth from '../useAuth.js'
 const About = ({code}) => {
+  const accessToken = useAuth(code)
   return (
     <div className='bg-white h-screen w-screen'>
         <div className='border-4 w-11/12 h-full border-black m-auto '>

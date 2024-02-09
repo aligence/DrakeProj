@@ -7,30 +7,17 @@ import { useEffect, useState } from 'react'
 
 
 
+
 {/*I CAN GET THE ACCESS TOKEN, NEED TO MAKE FUNCTION OR SOME OTHER THING 
 SO THAT IT AUTOMATICALLY PUTS THE ALBUM IMAGES INTO CAROUSEL COMPONENT*/}
 const CLIENT_ID = "e1635bb6cf544f28a1aa7c4844000ff7"
 const CLIENT_SECRET = "d2114d03781c4b328b2756a755f81d49"
-const REDIRECT_URI = "http://localhost:5173/callback";
-const code = new URLSearchParams(window.location.search).get('code')
+
 function App() {
-  const [accessToken, setAccessToken] = useState("");
   
 
-  useEffect(() =>{
-    //API Acces Token
-    var authParam ={
-      method: 'POST',
-      headers:{
-        "Content-Type": "application/x-www-form-urlencoded"
-      },
-      body: 'grant_type=client_credentials&client_id=' + CLIENT_ID + '&client_secret=' +CLIENT_SECRET
-    }
-    fetch('https://accounts.spotify.com/api/token', authParam )
-      .then(result => result.json())
-      .then(data => setAccessToken(data.access_token))
-  },[])
-
+  const urlParams = new URLSearchParams(window.location.search);
+  let code = urlParams.get('code');
   
   return (
     <>
@@ -46,7 +33,8 @@ function App() {
           </video>
           <Timer></Timer>
         </div>
-        {code ? <About code ={code}/> : <Login/>}
+        { (code ? <About code={code}  /> : <Login />)}
+        {code}
       </div>
     </>
   )
